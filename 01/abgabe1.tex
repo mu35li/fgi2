@@ -52,7 +52,7 @@ Im Fall \textbf{L(C)} ist n=4. Unser Automat A akzeptiert allerdings keine Wört
 Das Verfahren besteht wie in den Präsenzaufgaben zunächst darin, aus dem NFA mittels der Potenzautomatenkonstruktion einen DFA zu machen. Dann vervollständigen wir den Automaten, fügen also noch fehlende Kanten hinzu die in einen Fehlzustand führen. Wenn alle Zustände Endzustände sind, dann gilt $L(A)=\sum^{*}$, da somit alle Wörter akzeptiert werden denn nach jedem Übergang gelangt man in einen Endzustand.
 \subsubsection{}
 \includegraphics[scale=0.5]{152.png}\\
-Wir konstruieren einen Potenautomaten. Da es von jedem Zustand eine a und eine b Kante gibt, müssen wir keine Kanten hinzufügen. Alle Zustände sind Endzustände. Somit ist es egal welches Wort wir eingeben, das Wort wird immer akzeptiert. Somit gilt für diesen Automaten $L(A)=\sum^{*}$.
+Wir konstruieren einen Potenzautomaten. Da es von jedem Zustand eine a und eine b Kante gibt, müssen wir keine Kanten hinzufügen. Alle Zustände sind Endzustände. Somit ist es egal welches Wort wir eingeben, das Wort wird immer akzeptiert. Somit gilt für diesen Automaten $L(A)=\sum^{*}$.
 \subsubsection{}
 Unser Verfahren terminiert, da es sich um einen endlichen Automaten handelt. Daher muss er auch nach endlichen Schritten terminieren. Es ist korrekt, da es prüft ob $L(A)=\sum^{*}$ gilt also alle Wörter akzeptiert werden. Da jeder Zustand ein Endzustand ist, kann der Automat bei keinem Wort aus $\{a,b\}$ blockieren. Und da aus jedem Zustand eine a und eine b Kante führt, kann das Wort beliebig (aber endlich) lang sein.
 \subsubsection{}
