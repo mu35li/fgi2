@@ -14,10 +14,24 @@
 \usepackage{amssymb}
 \usepackage{gensymb}
 \usepackage{dsfont}
+\usepackage{fancyhdr}
 
-\title{Abgabe 1}
-\author{Rafael Heid, Julian Deinert, Sabrina Buczko Gruppe\\ 6 und 7}
-\date{Abgabe am 24.10.16}
+%\title{Abgabe 1}
+%\author{Rafael Heid, Julian Deinert, Sabrina Buczko Gruppe\\ 6 und 7}
+%\date{Abgabe am 24.10.16}
+
+\gdef\blatt{FGI-2 Aufgabenblatt 01}
+
+\title{\blatt}
+\date{Gruppe 06}
+\author{Sabrina Buczko 6663234, Julian Deinert 6535880, Rafael Heid 6704828}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\blatt}
+\fancyhead[R]{Buczko, Deinert, Heid}
+\fancyfoot[C]{\thepage}
 
 \begin{document}
 \maketitle
@@ -32,10 +46,10 @@ Endlich bedeutet, dass wir eine endliche Menge an Zuständen sowie ein endlich l
 \subsubsection{}
 Unsere akzeptierte Sprache muss mind. das Zeichen b enthalten. Es müssen gleich viele a's und c's im Wort enthalten sein, damit wir im Endzustand landen.\\
 %sprich b oder abc oder aabcc oder aaabccc ....
-$L(A)=\{a^{n}bc^{n} | $mit$ n\in \mathds{N_{0}}\}$
+$L(A)=\{a^{n}bc^{n} | n\in \mathds{N_{0}}\}$
 \subsubsection{}
-Wir beweisen mit Hilfe des Pumping Lemmas, dass L(A) nicht regulär ist.\\
-Angenommen L wäre regulär. Dann gilt das Pumping Lemma für L. Sei k die Zahl aus dem Pumping Lemma. Wir betrachten das Wort $w=a^{n}bc^{n}$. Es müssen also immer gleich viele a's und c's im Wort enthalten sein und ein b. Es gilt $|w|>n$ und $w\in L.$ Sei nun $z=uvw$ einer Zerlegung blabla
+Wir beweisen mit Hilfe des Pumping Lemmas, dass $L(A)$ nicht regulär ist.\\
+Angenommen $L$ wäre regulär. Dann gilt das Pumping Lemma für $L$. Sei $k$ die Zahl aus dem Pumping Lemma. Betrachten wir das Wort $z=a^kbc^k$. Wegen $|a^k| = |c^k|$ gilt $z \in L$ und $|z|\geq k$. Somit gilt das Pumping Lemma und es gibt für $z$ eine Zerlegung in $uvw$ mit $|uv|\leq k$, $|v|> 0$ und $\forall i\in \mathbb{N}_0.\, u\cdot v^i\cdot w \in L$. Wir zeigen nun, dass jede Zerlegung von $z$ in $uvw$, die die ersten beiden Bedingungen erfüllt, die dritte nicht erfüllt und das Pumping Lemma somit doch nicht gilt. Da $z$ mit $a^k$ beginnt ist $uv \in \{a\}^*$ wegen $|v|> 0$ gilt sogar $v \in \{a\}^+$. Ferner gibt es ein $j$ mit $1 \leq j \leq k$ derart, dass  $v = a^j$ ist. Betrachten wir nun $uv^2w = a^{k+j}bc^k$ dann gilt $k+j < k$ wegen $j \geq 1$ und somit $uvw \notin L$. Im Widerspruch zum Pumping Lemma ist $L$ also nicht regulär. 
 %Zur hilfe: https://github.com/weristspokey/Uni/blob/master/fgi/fgi1_l3.pdf
 \subsubsection{}
 Die zugehörige Grammatik lautet:\\
