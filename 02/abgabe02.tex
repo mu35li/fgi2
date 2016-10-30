@@ -45,5 +45,29 @@ $L(A_{2.3})=\lambda+(ab)^*+cd^*$\\
 $L^\omega(A_{2.3}) = (ab)^\omega + cd^\omega$\\
 $(L(A_{2.3})=\lambda+(ab)^*+cd^*)^\omega$
 \subsubsection{}
-$L^\omega(A_{2.3})$ ist die akzpetierte Sprache, wenn wir den NFA $A_{2.3}$ als Büchi-Automaten betrachten bei dem mindestens ein Endzustand unendlich oft durchlaufen werden muss. Der Automat akzpetiert die $\omega$-Wörter $\omega_1 = (ab)^\omega$ und $\omega_2 = cd^\omega$. $(L(A_{2.3}))^\omega$ ist eine Sprache mit unendlich vielen $\omega$-Wörtern. Diese können beliebig aus Teilen der vom NFA $A_{2.3}$ akzpetierten Sprache $L(A_{2.3})$ zusammengesetzt werden. Beispiele für solche Wörter sind $\omega_1 = (ab)^\omega$ oder auch $\omega_3 = (abc)^\omega$.
+$L^\omega(A_{2.3})$ ist die akzpetierte Sprache, wenn wir den NFA $A_{2.3}$ als 
+Büchi-Automaten betrachten bei dem mindestens ein Endzustand unendlich oft 
+durchlaufen werden muss. Der Automat akzpetiert die $\omega$-Wörter $\omega_1 = 
+(ab)^\omega$ und $\omega_2 = cd^\omega$. $(L(A_{2.3}))^\omega$ ist eine Sprache 
+mit unendlich vielen $\omega$-Wörtern. Diese können beliebig aus Teilen der vom 
+NFA $A_{2.3}$ akzpetierten Sprache $L(A_{2.3})$ zusammengesetzt werden. 
+Beispiele für solche Wörter sind $\omega_1 = (ab)^\omega$ oder auch $\omega_3 = 
+(abc)^\omega$.
+\subsubsection{}
+\subsection{}
+\subsubsection{}
+Verfahren:
+\begin{enumerate}
+\item Die beiden Automaten werden nebeneinander aufgemalt
+\item Jede Kante, die einen Zyklus im Ursprungsautomaten beendet, wird kopiert 
+und zu allen weiteren Startzuständen umgebogen
+\end{enumerate}
+\subsubsection{}
+Termination:\\
+Da beide Automaten endliche viele Kanten, die Zyklen beenden können haben, 
+müssen nur endlich viele Kanten kopiert und zu endlich vielen Zuständen 
+umgebogen werden. Dieses terminiert somit in endlicher Zeit.
+\\\\
+Korrektheit:\\
+Da der Zweite teil eines Wortes im neuen Automaten gleich dem vollständigen akzpetierten Wort des Ursprungsautomaten ist, ergibt sich die Korrektheit daraus, dass vom ersten Teil des Wortes in den zweiten Ursprungsautomat gewechselt und somit das urspünglich akzpetierte Wort gelesen werden kann.  
 \end{document}
