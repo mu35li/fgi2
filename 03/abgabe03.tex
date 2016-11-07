@@ -54,7 +54,23 @@ $L^\omega (A_2)=(\{a,c\}\cdot\{b\}^* \cdot \{a,c\}\cdot \{a\}^* \cdot\{b\})^\ome
 \subsubsection{}
 $L(A_{3}) = \emptyset$\\
 $L^\omega(A_{3}) = \emptyset$\\
+Der Schnitt $L(A_1) \cap L(A_2)$ ist ebenfalls die leere Menge, da Wörter in 
+$L(A_1)$ mit $a,c$ beginnen und auf $b$ enden müssen, in $L(A_2)$ müssen 
+Worte jedoch auf $a,c$ enden.\\
+Allerdings ist der Schnitt $L^\omega(A_1) \cap L^\omega(A_2) = (\{a,c\}\cdot\{b\})^\omega
+$ und somit verschieden zur leeren Menge.\\ Diese Produktautomatenkonstruktion 
+gibt \textit{nicht} immer den Schnitt zweier $\omega$-Sprachen zurück. 
 
+\subsubsection{}
+\includegraphics[scale=0.7]{335.pdf}
+\subsubsection{}
+$L(A_4)=(\{a,c\}\cdot\{b\}\cdot\{a,c\}\cdot\{b\})^*$\\
+$L^\omega(A_4)=(\{a,c\}\cdot\{b\})^\omega$\\
+Wie bereits genannt, ist $L(A_1) \cap L(A_2) = \emptyset$. Somit akzeptiert 
+$A_4$ mehr, als der Schnitt der beiden Sprachen.
+$A_4$ akzeptiert allerdings genau den Schnitt $L^\omega(A_1) \cap L^\omega(A_2) 
+= (\{a,c\}\cdot\{b\})^\omega$ und gibt somit den Schnitt der $\omega$-Sprachen 
+zurück.
 \subsection{}
 \subsubsection{}
 Für $TS_1 \leftrightarroweq TS_2$ müsste gelten:\\
