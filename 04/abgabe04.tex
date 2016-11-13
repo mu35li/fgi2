@@ -69,7 +69,11 @@ $f=$ G $(shields \Rightarrow (($ X $ \neg{shields} \Rightarrow $ F $warp))$,
  dass immer wenn shields gilt, und als nächstes shields nichtmehr gilt, 
 irgendwann in der Zukunft warp gilt. Anders gesagt: Damit warp genutzt 
 werden kann, müssen die shields vorher deaktiviert werden, sofern sie 
-aktiviert sind.
+aktiviert sind.\\
+
+Die LTL formel gilt in $s_0$, da der einzige Zustand in dem $shields$ gilt
+$s_3$ ist und von hier $warp$ in $s_2$ nur dann gilt, nachdem $shields$ 
+durch $end\_battle$ nicht mehr gilt.
 \subsubsection{}
 \subsection{}
 1. irgendwann einmal gilt immer warp oder shields
