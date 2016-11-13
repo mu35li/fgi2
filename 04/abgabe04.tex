@@ -62,30 +62,36 @@ $= (\{orbit\}(\{away,orbit\} + \{warp\} + (\{warp\}((\{shields\}^+ \emptyset))^*
 
 \subsubsection{}
 \subsection{}
-1. irgendwann einmal gilt immer warp oder shields
-2.
-3. es gilt immer, dass shields impliziert shields until das nächtse mal warp kommt
-4. orbit impliziert immer dass das übernächste mal warp kommt
-5 wenn nicht orbit,nicht shields, nicht warp und das übernchste mal nicht orbit kommt impliziert dies immer dass iwann mal shields kommt
-6. beim überübernächsten Mal gilt irgendwann orbit und nicht warp
-%
-%\begin{tabular}{|c|>{\(}c<{\)}|c|c|}
-%\hline
-%\# & f & \(\Mcell \models f\) & \(\Mcell,\pi \models f\) \\
-%\hline
-%1 & \tlG(\eActive)
-%& Falsch & Falsch \\
-%2 & \tlG\tlF(\eActive)
-%& Falsch & Wahr \\
-%3 & \tlG(\tlX \eActive \Rightarrow \eOn)
-%& Wahr & Wahr \\
-%4 & \tlG\tlF(\eActive \Rightarrow \tlX\tlX \lnot \eOn)
-%& Wahr & Wahr \\
-%5 & \tlG\tlF(\lnot \eBattery \lor \eActive \lor \lnot \eOn \lor \eError)
-%& Falsch & Wahr \\
-%6 & \tlX\tlX\tlX \eActive
-%& Wahr & Wahr \\
-%\hline
-%\end{tabular}
+%1. irgendwann einmal gilt immer warp oder shields
+%2.
+%3. shields impliziert immer shields until das nächtse mal warp kommt
+%4. orbit impliziert immer dass das übernächste mal warp kommt
+%5 wenn nicht orbit,nicht shields, nicht warp und das übernchste mal nicht orbit kommt impliziert dies immer dass iwann mal shields kommt
+%6. beim überübernächsten Mal gilt irgendwann orbit und nicht warp
 
+\begin{tabular}{|c|>{\(}c<{\)}|c|c|}
+\hline
+\# & f & $M_{Enterprise} \models f$ & $M_{Enterprise},\pi \models f$ \\
+\hline
+1 & $\diamond \square(warp\vee shields)$ & Falsch & Richtig \\
+2 & $\square\diamond(warp\vee shields)$ & Falsch & Richtig \\
+3 & $\square(shields\Rightarrow(shields \textbf{U}(\circ warp)))$ & Falsch & Falsch \\
+4 & $\square(orbit\Rightarrow\circ\circ warp)$ & Falsch & Falsch\\
+5 & $\square((\neg orbit\wedge\neg shields\wedge\neg warp\wedge\circ\circ\neg orbit)\Rightarrow\diamond shields)$ & Richtig & Richtig \\
+6 & $\circ\circ\circ\diamond(orbit\wedge\neg warp)$ & Falsch & Falsch\\ 
+\hline
+\end{tabular}
+\textbf{Begründungen:}\\
+1. $M\nvDash f$, da in einem Pfad $(s_0 s_1)^\omega$ niemals warp oder shields gilt.\\
+$M,\pi\vDash f$, da $s_2$ und $s_3$ in $\pi$ unendlich oft durchlaufen werden und sie die Etiketten warp und shields haben.\\\\
+2. $M\nvDash f$, aus dem gleichen Grund wie in 1.\\
+$M,\pi\vDash f$, aus dem gleichen Grund wie in 1.\\\\
+3. $M\nvDash f$, denn wenn shields aktiviert ist in $s_3$ und das nächste mal warp in $s_2$ kommt, ist shields schon vorher wieder in $s_4$ negiert worden.\\
+$M,\pi\nvDash f$, aus dem selben Grund wie in $M\nvDash f$.\\\\
+4. $M\nvDash f$, da $M\vDash f$ nur gilt in dem Pfad $(s_0 s_1 s_0 s_2)^\omega$. In einem Pfad $(s_0 s_1 s_0 s_1)^\omega$ impliziert orbit niemals dass das übernächste Mal warp kommt.\\
+$M,\pi\nvDash f$, da man nach dem $s_0$ als übernächstes Mal im $s_3$ ist, ist warp negiert.\\\\
+5. $M\vDash f$, da orbit, shields und warp nur in Zustand $s_4$ negiert sind und beim übernächsten Mal orbit immernoch negiert sein soll, können wir uns nur in $s_3$ befinden. Und in $s_4$ gilt shields.\\
+$M,\pi\vDash f$, da im Pfad $\pi$, nach dem Zustand $s_4$ immer als übernächster Zustand $s_3$ kommt gilt die selbe Begründung wie bei $M\vDash f$.\\\\
+6. $M\nvDash f$, da in einem Pfad der höchstens zweimal den Zustand $s_0$ durchläuft, nie mehr orbit und nicht warp gilt.\\
+$M,\pi\nvDash f$, da $s_0$ nur am Anfang durchlaufen wird und dann der Pfad $\pi$ in der Schleife bleibt, gilt nie wieder orbit und nicht warp.
 \end{document}
