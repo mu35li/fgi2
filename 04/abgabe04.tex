@@ -50,10 +50,38 @@ $L^\omega(TS_{Enterprise})=((du)^*+(le)^*+((lk)\cdot (p)^*\cdot (bwe))^*)^\omega
 $SS(M_{Enterprise})=(0(1 + 2 + (2((3)^+ 4))^*))^\omega$\\
 
 \subsubsection{}
-$E_S(s_i)=$\\
-$E_S(SS(M_{Enterprise}))=$
+$E_S(s_0)=\{orbit\}$\\
+$E_S(s_1)=\{away, orbit\}$\\
+$E_S(s_2)=\{warp\}$\\
+$E_S(s_3)=\{shields\}$\\
+$E_S(s_4)=\{\emptyset\}$\\
+$E_S(SS(M_{Enterprise}))=E_S((0(1 + 2 + (2((3)^+ 4))^*))^\omega)$\\
+$= ((E_S(s_0)(E_S(s_1) + E_S(s_2) + (E_S(s_2)((E_S(s_3))^+ E_S(s_4)))^*))^\omega)$\\
+$= (\{orbit\}(\{away,orbit\} + \{warp\} + (\{warp\}((\{shields\}^+ \emptyset))^*))^\omega$\\
 \subsubsection{}
 
 \subsubsection{}
 \subsection{}
+1. irgendwann einmal gilt immer warp oder shields
+2. 
+%
+%\begin{tabular}{|c|>{\(}c<{\)}|c|c|}
+%\hline
+%\# & f & \(\Mcell \models f\) & \(\Mcell,\pi \models f\) \\
+%\hline
+%1 & \tlG(\eActive)
+%& Falsch & Falsch \\
+%2 & \tlG\tlF(\eActive)
+%& Falsch & Wahr \\
+%3 & \tlG(\tlX \eActive \Rightarrow \eOn)
+%& Wahr & Wahr \\
+%4 & \tlG\tlF(\eActive \Rightarrow \tlX\tlX \lnot \eOn)
+%& Wahr & Wahr \\
+%5 & \tlG\tlF(\lnot \eBattery \lor \eActive \lor \lnot \eOn \lor \eError)
+%& Falsch & Wahr \\
+%6 & \tlX\tlX\tlX \eActive
+%& Wahr & Wahr \\
+%\hline
+%\end{tabular}
+
 \end{document}
