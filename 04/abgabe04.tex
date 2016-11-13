@@ -59,21 +59,7 @@ $E_S(SS(M_{Enterprise}))=E_S((0(1 + 2 + (2((3)^+ 4))^*))^\omega)$\\
 $= ((E_S(s_0)(E_S(s_1) + E_S(s_2) + (E_S(s_2)((E_S(s_3))^+ E_S(s_4)))^*))^\omega)$\\
 $= (\{orbit\}(\{away,orbit\} + \{warp\} + (\{warp\}((\{shields\}^+ \emptyset))^*))^\omega$\\
 \subsubsection{}
-Da \textit{shields} nur in $s_3$ gilt, ist $Sat(shields)=\{3\}$.\\
-$\neg orbit$ gilt in $s_2, s_3$ und $s_4$ 
-also ist $Sat(\neg{orbit})=\{2,3,4\}$.\\
-Schließlich gilt $warp$ nur in $s_2$ und somit ist $Sat(warp)=\{2\}$.\\
 
-In natürlicher Sprache bedeutet
-$f=$ G $(shields \Rightarrow (($ X $ \neg{shields} \Rightarrow $ F $warp))$,
- dass immer wenn shields gilt, und als nächstes shields nichtmehr gilt, 
-irgendwann in der Zukunft warp gilt. Anders gesagt: Damit warp genutzt 
-werden kann, müssen die shields vorher deaktiviert werden, sofern sie 
-aktiviert sind.\\
-
-Die LTL formel gilt in $s_0$, da der einzige Zustand in dem $shields$ gilt
-$s_3$ ist und von hier $warp$ in $s_2$ nur dann gilt, nachdem $shields$ 
-durch $end\_battle$ nicht mehr gilt.
 \subsubsection{}
 \subsection{}
 %1. irgendwann einmal gilt immer warp oder shields
