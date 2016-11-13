@@ -109,4 +109,22 @@ $M,\pi\nvDash f$, da man nach dem $s_0$ als übernächstes Mal im $s_3$ ist, ist
 $M,\pi\vDash f$, da im Pfad $\pi$, nach dem Zustand $s_4$ immer als übernächster Zustand $s_3$ kommt gilt die selbe Begründung wie bei $M\vDash f$.\\\\
 6. $M\nvDash f$, da in einem Pfad der höchstens zweimal den Zustand $s_0$ durchläuft, nie mehr orbit und nicht warp gilt.\\
 $M,\pi\nvDash f$, da $s_0$ nur am Anfang durchlaufen wird und dann der Pfad $\pi$ in der Schleife bleibt, gilt nie wieder orbit und nicht warp.
+\newpage
+\subsection{}
+Wann heißt ein Pfad $\pi=s_0s_1s_2... \in SS(M)$ fair?\\
+Ein Pfad heißt fair falls...
+\begin{itemize}
+\item infinite($\pi$)$\ \cap\ E^i_F \neq \emptyset$ für alle i $\in$ \{$1, ..., k\}$ gilt.
+\item infinite($\pi$)$\ \cap\ E^i_F \neq \emptyset$ für kein i $\in$ \{$1, ..., k\}$ gilt.
+\item infinite($\pi$)$\ \cap\ E^i_F \neq \emptyset$ für mindestens ein i $\in$ \{$1, ..., k\}$ gilt.
+\item infinite($\pi$)$\ \cap\ E^i_F \neq \emptyset$ für genau ein i $\in$ \{$1, ..., k\}$ gilt.
+\end{itemize}
+
+\subsubsection*{}
+Welche der folgenden Aussagen trifft für das Model-Checking zu?
+\begin{itemize}
+\item Zu jeder LTL-Formel existiert eine ihre Sprache akzeptierende Kripke-Struktur.
+\item Es wird eine LTL-Formel benötigt, um Model-Checking durchzuführen.
+\item Model-Checking ist ein schnelles, informales Verfahren um Informatik-Systeme auf ihre Korrektheit zu prüfen.
+\end{itemize}
 \end{document}
