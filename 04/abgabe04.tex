@@ -75,6 +75,7 @@ Die LTL formel gilt in $s_0$, da der einzige Zustand in dem $shields$ gilt
 $s_3$ ist und von hier $warp$ in $s_2$ nur dann gilt, nachdem $shields$ 
 durch $end\_battle$ nicht mehr gilt.
 \subsubsection{}
+Die Formel g besagt, dass orbit oder away gilt bis warp gilt. Dies ist in einem Pfad $\pi = s_0 s_1 s_2 ...$ sowie in $\pi ' = s_0 s_2 ...$der Fall. Warp gilt erst im Zustand $s_2$ und der kann erst betreten werden wenn man aus $s_0$ kommt. Geht man von $s_0$ direkt in $s_2$ dann galt orbit Until warp. Ist in dem Pfad vorher noch in $s_1$ gewesen ist auch orbit Until warp der Fall.
 \subsection{}
 %1. irgendwann einmal gilt immer warp oder shields
 %2.
@@ -83,7 +84,7 @@ durch $end\_battle$ nicht mehr gilt.
 %5 wenn nicht orbit,nicht shields, nicht warp und das übernchste mal nicht orbit kommt impliziert dies immer dass iwann mal shields kommt
 %6. beim überübernächsten Mal gilt irgendwann orbit und nicht warp
 
-\begin{tabular}{|c|>{\(}c<{\)}|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
 \# & f & $M_{Enterprise} \models f$ & $M_{Enterprise},\pi \models f$ \\
 \hline
