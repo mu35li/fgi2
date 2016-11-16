@@ -1,0 +1,130 @@
+\documentclass[a4paper,12pt]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{wasysym}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{paralist}
+\usepackage{upgreek}
+\usepackage{subfigure}
+\usepackage{tipa}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{dsfont}
+\usepackage{mathtools}
+\usepackage{ stmaryrd }
+\usepackage{fancyhdr}
+
+%\title{Abgabe 1}
+%\author{Rafael Heid, Julian Deinert, Sabrina Buczko Gruppe\\ 6 und 7}
+%\date{Abgabe am 24.10.16}
+
+\gdef\blatt{FGI-2 Aufgabenblatt 04}
+
+\title{\blatt}
+\date{Gruppe 06}
+\author{Sabrina Buczko 6663234, Julian Deinert 6535880, Rafael Heid 6704828}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\blatt}
+\fancyhead[R]{Buczko, Deinert, Heid}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+\maketitle
+\newpage
+\setcounter{section}{3}
+\section{}
+\setcounter{subsection}{2}
+\subsection{}
+\subsubsection{}
+$L(TS_{Enterprise})= ((du)^*+(le)^*+((lk)\cdot (p)^*\cdot (bwe))^*)^*$\\
+$L^\omega(TS_{Enterprise})=((du)^*+(le)^*+((lk)\cdot (p)^*\cdot (bwe))^*)^\omega$
+\subsubsection{}
+%$SS(M_{Enterprise})=(s_0(s_1 + s_2 + (s_2((s_3)^+ s_4))^*))^\omega$\\
+$SS(M_{Enterprise})=(0(1 + 2 + (2((3)^+ 4))^*))^\omega$\\
+
+\subsubsection{}
+$E_S(s_0)=\{orbit\}$\\
+$E_S(s_1)=\{away, orbit\}$\\
+$E_S(s_2)=\{warp\}$\\
+$E_S(s_3)=\{shields\}$\\
+$E_S(s_4)=\{\emptyset\}$\\
+$E_S(SS(M_{Enterprise}))=E_S((0(1 + 2 + (2((3)^+ 4))^*))^\omega)$\\
+$= ((E_S(s_0)(E_S(s_1) + E_S(s_2) + (E_S(s_2)((E_S(s_3))^+ E_S(s_4)))^*))^\omega)$\\
+$= (\{orbit\}(\{away,orbit\} + \{warp\} + (\{warp\}((\{shields\}^+ \emptyset))^*))^\omega$\\
+\subsubsection{}
+Da \textit{shields} nur in $s_3$ gilt, ist $Sat(shields)=\{3\}$.\\
+$\neg orbit$ gilt in $s_2, s_3$ und $s_4$ 
+also ist $Sat(\neg{orbit})=\{2,3,4\}$.\\
+Schließlich gilt $warp$ nur in $s_2$ und somit ist $Sat(warp)=\{2\}$.\\
+
+In natürlicher Sprache bedeutet
+$f=$ G $(shields \Rightarrow (($ X $ \neg{shields} \Rightarrow $ F $warp))$,
+ dass immer wenn shields gilt, und als nächstes shields nichtmehr gilt, 
+irgendwann in der Zukunft warp gilt. Anders gesagt: Damit warp genutzt 
+werden kann, müssen die shields vorher deaktiviert werden, sofern sie 
+aktiviert sind.\\
+
+Die LTL formel gilt in $s_0$, da der einzige Zustand in dem $shields$ gilt
+$s_3$ ist und von hier $warp$ in $s_2$ nur dann gilt, nachdem $shields$ 
+durch $end\_battle$ nicht mehr gilt.
+\subsubsection{}
+Die Formel g besagt, dass orbit oder away gilt bis warp gilt. Dies ist in einem Pfad $\pi = s_0 s_1 s_2 ...$ sowie in $\pi ' = s_0 s_2 ...$der Fall. Warp gilt erst im Zustand $s_2$ und der kann erst betreten werden wenn man aus $s_0$ kommt. Geht man von $s_0$ direkt in $s_2$ dann galt orbit Until warp. Ist in dem Pfad vorher noch in $s_1$ gewesen ist auch orbit Until warp der Fall.
+\subsection{}
+%1. irgendwann einmal gilt immer warp oder shields
+%2.
+%3. shields impliziert immer shields until das nächtse mal warp kommt
+%4. orbit impliziert immer dass das übernächste mal warp kommt
+%5 wenn nicht orbit,nicht shields, nicht warp und das übernchste mal nicht orbit kommt impliziert dies immer dass iwann mal shields kommt
+%6. beim überübernächsten Mal gilt irgendwann orbit und nicht warp
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+\# & f & $M_{Enterprise} \models f$ & $M_{Enterprise},\pi \models f$ \\
+\hline
+1 & $\diamond \square(warp\vee shields)$ & Falsch & Richtig \\
+2 & $\square\diamond(warp\vee shields)$ & Falsch & Richtig \\
+3 & $\square(shields\Rightarrow(shields \textbf{U}(\circ warp)))$ & Falsch & Falsch \\
+4 & $\square(orbit\Rightarrow\circ\circ warp)$ & Falsch & Falsch\\
+5 & $\square((\neg orbit\wedge\neg shields\wedge\neg warp\wedge\circ\circ\neg orbit)\Rightarrow\diamond shields)$ & Richtig & Richtig \\
+6 & $\circ\circ\circ\diamond(orbit\wedge\neg warp)$ & Falsch & Falsch\\ 
+\hline
+\end{tabular}
+\textbf{Begründungen:}\\
+1. $M\nvDash f$, da in einem Pfad $(s_0 s_1)^\omega$ niemals warp oder shields gilt.\\
+$M,\pi\vDash f$, da $s_2$ und $s_3$ in $\pi$ unendlich oft durchlaufen werden und sie die Etiketten warp und shields haben.\\\\
+2. $M\nvDash f$, aus dem gleichen Grund wie in 1.\\
+$M,\pi\vDash f$, aus dem gleichen Grund wie in 1.\\\\
+3. $M\nvDash f$, denn wenn shields aktiviert ist in $s_3$ und das nächste mal warp in $s_2$ kommt, ist shields schon vorher wieder in $s_4$ negiert worden.\\
+$M,\pi\nvDash f$, aus dem selben Grund wie in $M\nvDash f$.\\\\
+4. $M\nvDash f$, da $M\vDash f$ nur gilt in dem Pfad $(s_0 s_1 s_0 s_2)^\omega$. In einem Pfad $(s_0 s_1 s_0 s_1)^\omega$ impliziert orbit niemals dass das übernächste Mal warp kommt.\\
+$M,\pi\nvDash f$, da man nach dem $s_0$ als übernächstes Mal im $s_3$ ist, ist warp negiert.\\\\
+5. $M\vDash f$, da orbit, shields und warp nur in Zustand $s_4$ negiert sind und beim übernächsten Mal orbit immernoch negiert sein soll, können wir uns nur in $s_3$ befinden. Und in $s_4$ gilt shields.\\
+$M,\pi\vDash f$, da im Pfad $\pi$, nach dem Zustand $s_4$ immer als übernächster Zustand $s_3$ kommt gilt die selbe Begründung wie bei $M\vDash f$.\\\\
+6. $M\nvDash f$, da in einem Pfad der höchstens zweimal den Zustand $s_0$ durchläuft, nie mehr orbit und nicht warp gilt.\\
+$M,\pi\nvDash f$, da $s_0$ nur am Anfang durchlaufen wird und dann der Pfad $\pi$ in der Schleife bleibt, gilt nie wieder orbit und nicht warp.
+\newpage
+\subsection{}
+Wann heißt ein Pfad $\pi=s_0s_1s_2... \in SS(M)$ fair?\\
+Ein Pfad heißt fair falls...
+\begin{itemize}
+\item infinite($\pi$)$\ \cap\ E^i_F \neq \emptyset$ für alle i $\in$ \{$1, ..., k\}$ gilt.
+\item infinite($\pi$)$\ \cap\ E^i_F \neq \emptyset$ für kein i $\in$ \{$1, ..., k\}$ gilt.
+\item infinite($\pi$)$\ \cap\ E^i_F \neq \emptyset$ für mindestens ein i $\in$ \{$1, ..., k\}$ gilt.
+\item infinite($\pi$)$\ \cap\ E^i_F \neq \emptyset$ für genau ein i $\in$ \{$1, ..., k\}$ gilt.
+\end{itemize}
+
+\subsubsection*{}
+Welche der folgenden Aussagen trifft für das Model-Checking zu?
+\begin{itemize}
+\item Zu jeder LTL-Formel existiert eine ihre Sprache akzeptierende Kripke-Struktur.
+\item Es wird eine LTL-Formel benötigt, um Model-Checking durchzuführen.
+\item Model-Checking ist ein schnelles, informales Verfahren um Informatik-Systeme auf ihre Korrektheit zu prüfen.
+\end{itemize}
+\end{document}
