@@ -61,6 +61,26 @@ Für $g_2$:\\
 Für $g_2$ lässt sich sagen, dass $g_2$ nicht immer auf $M$ gilt, da immer ein Pfad exisitert, nachdem irgendwann in der Zukunft $\neg warp$ gilt und somit nicht für alle Pfade irgendwann $warp$ gilt.
 
 \subsection{}
+\subsubsection{}
+Die Transitionssysteme der drei Roboter sehen wie folgt aus:\\
+\includegraphics[scale=0.5]{roboter_trans.png}\\
+Wobei $h_i$ und $v_i$ jeweils die, den Robotern aufgetragenen Aufgaben widerspiegeln.
+\subsubsection{}
+Folgendes Produkttransitionssystem entsteht aus den Transitionssystemen der drei Roboter:\\
+\includegraphics[scale=0.5]{roboter_prod.png}\\
+Dabei haben wir eine Synchronisationsrelation $Sync = \{(h1, v2, h3), (v1, h2, v3)\}$
+\subsubsection{}
+geg.: $\phi = G\lnot((v_1 \land v_2) \lor (v_3 \land v_2))$\\
+Umformung zu $\lnot\phi$:\\
+\begin{tabular}{ll}
+$\lnot\phi$&$=\lnot G\lnot((v_1 \land v_2) \lor (v_3 \land v_2))$\\
+&$=F(\lnot\lnot((v_1 \land v_2) \lor (v_3 \land v_2))$\\
+&$=F((v_1 \land v_2) \lor (v_3 \land v_2))$
+\end{tabular}\\
+Folgender Büchi-Automat akzeptiert dieselbe Sprache:\\
+\includegraphics[scale=0.5]{roboter_buechi.png}
+\subsubsection{}
+
 \subsection{}
 \subsubsection{}
 Die richtigen Antworten sind fett gedruckt.\\\\
