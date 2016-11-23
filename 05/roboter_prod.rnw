@@ -1,0 +1,26 @@
+11 
+    de.renew.gui.CPNDrawing 8 
+        de.renew.fa.figures.FAStateFigure "attributes" "attributes" 2 "FigureWithID" "Int" 2 "FillColor" "Color" 255 255 255 255 137 276 276 98 NULL 
+            de.renew.fa.figures.NullDecoration  "de.renew.fa.figures.NullDecoration"  
+        de.renew.fa.figures.FATextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 4 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 204 295 "Deckel geholt_{1},\nDose verschlossen_{2},\nDeckel geholt_{3}" "SansSerif" 1 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.fa.figures.FAStateFigure "attributes" "attributes" 2 "FigureWithID" "Int" 12 "FillColor" "Color" 255 255 255 255 138 76 273 89 NULL 
+            de.renew.fa.figures.StartDecoration  "de.renew.fa.figures.StartDecoration"  
+        de.renew.fa.figures.FAArcConnection "attributes" "attributes" 5 "LineStyle" "String" "" "FigureWithID" "Int" 13 "FrameColor" "Color" 0 0 0 255 "LineShape" "Int" 1 "BSplineSegments" "Int" 15 3 235 162 175 224 230 280 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 6  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1   
+        de.renew.fa.figures.FATextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 14 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 255 199 158 255 203 90 "Dose verschlossen_{1},\nDeckel geholt_{2},\nDose verschlossen_{3}" "SansSerif" 1 12 0 REF 6 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   2  
+        de.renew.fa.figures.FAArcConnection "attributes" "attributes" 5 "LineStyle" "String" "" "FigureWithID" "Int" 15 "FrameColor" "Color" 0 0 0 255 "LineShape" "Int" 1 "BSplineSegments" "Int" 15 3 320 280 379 217 319 161 NULL 
+            CH.ifa.draw.figures.ArrowTip 0.4 8.0 8.0 1  "CH.ifa.draw.figures.ArrowTip" 
+            CH.ifa.draw.figures.ChopEllipseConnector REF 1  
+            CH.ifa.draw.figures.ChopEllipseConnector REF 6   
+        de.renew.fa.figures.FATextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 16 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 254 254 254 255 323 210 "v1, h2, v3" "SansSerif" 0 12 0 REF 15 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  
+        de.renew.fa.figures.FATextFigure "attributes" "attributes" 4 "TextAlignment" "Int" 1 "FigureWithID" "Int" 17 "FrameColor" "Color" 255 199 158 255 "FillColor" "Color" 254 254 254 255 178 211 "h1, v2, h3" "SansSerif" 0 12 0 REF 8 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5   1  NULL  0 143 1926 600 
