@@ -39,32 +39,66 @@
 \maketitle
 \newpage
 \setcounter{section}{5}
+% Section 6
 \section{}
 \setcounter{subsection}{2}
+% Section 6.3
 \subsection{}
+% Section 6.3.1
 \subsubsection{}
 
+% Section 6.3.2
 \subsubsection{}
 
+% Section 6.3.3
 \subsubsection{}
 
+% Section 6.3.4
 \subsubsection{}
 
+% Section 6.3.5
 \subsubsection{}
 
+% Section 6.3.6
 \subsubsection{}
 
+% Section 6.4
 \subsection{}
 
+% Section 6.4.1
 \subsubsection{}
+\includegraphics[scale=0.4]{6_4_1.png}
 
+% Section 6.4.2
 \subsubsection{}
+\includegraphics[scale=0.4]{6_4_2.png}
+\\
+Wir haben eine Lagerkapazitätsstelle $p6$ hinzugefügt. 
+Auf dieser Stelle liegen initial 4 Marken. $b$ benötigt zum Schalten 
+immer eine Marke auf $p6$. Wenn eine Nachricht empfangen wird, 
+platziert $c$ wieder eine Marke auf $p6$.
 
+% Section 6.4.3
 \subsubsection{}
+\includegraphics[scale=0.4]{6_4_3.png}
+\\
+Der zweite Empfänger entspricht exakt dem ersten und kann Nachrichten von $p3$ erhalten. Da in der Aufgabe nicht spezifiziert wurde, dass beide die selbe einzelne Nachricht erhalten können sollen, haben wir uns hier für die einfachere Implementation entschieden. 
 
+% Section 6.4.4
 \subsubsection{}
+\includegraphics[scale=0.4]{6_4_4.png}
+\\
+Wir haben hierzu zwei Nachrichtenpuffer $p9$ und $p10$ sowei zwei 
+Transitionen $h$ und $g$ erstellt, die die Nachrichten in den Puffer 
+laden. Durch die Kantengewichte an den Ausgangskanten des Lagers, 
+stellen wir sicher, dass immer genau zwei Nachrichten entnommen 
+werden. Durch die Kantengewichte an den Kanten zur Lagerkapazität 
+stellen wir sicher, dass immer wieder richtig viele Plätze frei 
+werden. 
 
+% Section 6.4.5
 \subsubsection{}
+\includegraphics[scale=0.4]{6_4_5.png}
 \subsection{}
 \subsubsection{}
 Die fett gedruckten Antworten sind die richtigen.
