@@ -17,6 +17,8 @@
 \usepackage{mathtools}
 \usepackage{ stmaryrd }
 \usepackage{fancyhdr}
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata}
 
 %\title{Abgabe 1}
 %\author{Rafael Heid, Julian Deinert, Sabrina Buczko Gruppe\\ 6 und 7}
@@ -41,4 +43,27 @@
 \setcounter{section}{6}
 % Section 7
 \section{}
+\setcounter{subsection}{2}
+% Section 7.3
+\subsection{}
+% Section 7.3.1
+\subsubsection{}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=4cm, semithick]
+  \tikzstyle{every state}=[fill=none,draw=none,text=black]
+
+  \node[state] (A)              {$p2p4$};
+  \node[state] (B) [right of=A] {$p1(2)p3(2)$};
+  \node[state] (C) [below of=B] {$p1p3p4$};
+  \node[state] (D) [right of=B] {$p1p2p3$};
+  \node[state] (E) [below of=D] {$p2(2)$};
+  \node[state] (F) [below of=A] {$p4(2)$};
+
+  \path (A) edge              node {t3} (B)
+        (B) edge              node {t1} (D)
+            edge              node {t2} (C)
+        (D) edge              node {t1} (E)
+            edge [bend right] node {t2} (A)
+        (C) edge              node {t1} (A)
+            edge              node {t1} (F);
+\end{tikzpicture}
 \end{document}
