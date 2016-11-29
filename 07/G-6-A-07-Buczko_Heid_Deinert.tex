@@ -62,7 +62,7 @@
         (B) edge              node {$t_1$} (D)
             edge              node {$t_2$} (C)
         (D) edge              node {$t_1$} (E)
-            edge [bend right] node {$t_2$} (A)
+            edge [bend right] node [above] {$t_2$} (A)
         (C) edge              node {$t_1$} (A)
             edge              node {$t_2$} (F);
 \end{tikzpicture}
@@ -83,8 +83,10 @@ p1(2)p3(2)
 \subsubsection{}
 \begin{itemize}
 	\item{Lebendigkeit:}\\
-		Das Netz ist nicht lebendig, da beispielswiese von 
-		der Markierung $p4(2)$ keine anderen Markierungen 
+		Das Netz ist nicht lebendig, da beispielswiese nach 
+    dem Schalten von $t_3$, $t_2$ und wieder $t_2$ 
+		die Markierung $p4(2)$ erreicht ist und von dort
+    keine anderen Markierungen 
 		mehr erreicht werden können.
 	\item{Verklemmungsfreiheit:}\\
 		Das Netz ist aus dem gleichen Grund wie für die 
@@ -153,4 +155,50 @@ p1(2)p3(2)
   0\\
   \end{pmatrix}
 \end{math}
+% Section 7.3.5
+\subsubsection{}
+Wir verändern das Netz in folgenden Schritten:
+\begin{enumerate}
+  \item
+  Wir löschen die Transistion $t_2$
+  \item
+  Wir biegen die Kante, die ursprünglich von $p1$ zu $t_2$
+  führte, nach $t_1$ um. Da diese Kante bereits existiert,
+  verleihen wir ihr ein Kantengewicht von $2$.
+  \item 
+  Wir biegen die Kante, die ursprünglich von $p3$ zu $t_2$
+  führte, nach $t_1$ um. Da diese Kante bereits existiert,
+  verleihen wir ihr ebenfalls ein Kantengewicht von $2$.
+  \item
+  Wir biegen schließlich die Kante, die ursprünglich von $t_2$ nach $p4$ führte, so um, dass sie nun von $t_1$ nach $p4$ führt.
+\end{enumerate}
+Nach diesen Schritten erhalten wir das folgende Netz:\\
+\includegraphics[scale=0.8]{G-6-A-07-Netz1-Buczko_Heid_Deinert.pdf}\\
+Der Erreichbarkeitsgraph für diese Netz ist einfacher 
+Strukturiert.\\
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=4cm, semithick]
+  \tikzstyle{every state}=[fill=none,draw=none,text=black]
+
+  \node[state] (A)              {$p2p4$};
+  \node[state] (B) [right of=A] {$p1(2)p3(2)$};
+
+  \path (A) edge              node {$t_3$} (B)
+        (B) edge [bend right] node [above] {$t_1$} (A);
+\end{tikzpicture}
+\\
+Aus dem Erreichbarkeitsgraph lässt sich erkennen, dass
+das Netz nun nach dem initialen Schalten von $t_3$ durch 
+schalten von $t_1$ immer wieder in den Ursprungszustand 
+versetzt werden kann.
+\begin{itemize}
+  \item{Lebendigkeit:}\\
+    Das Netz ist nun lebendig, da nur noch abwechselnd $t_3$ und $t_1$ geschaltet werden kann und sich das Netz nach jedem durchlauf dieser Schaltfolge wieder im Ursprungszustand $p2p4$ befindet.  
+  \item{Verklemmungsfreiheit:}\\
+    Das Netz ist aus dem gleichen Grund wie für die 
+    Lebendigkeit nun auch verklemmungsfrei.
+  \item{Reversibilität:}\\
+    Das Netz ist aus dem selben Grund nun auch 
+    reversibel
+
+\end{itemize}
 \end{document}
