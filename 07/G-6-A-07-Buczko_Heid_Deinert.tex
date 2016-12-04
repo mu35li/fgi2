@@ -216,6 +216,19 @@ um dann 100 Autos produzieren zu können.
 Nachdem 100 Autos produziert wurden, werden diese ausgeliefert
 und der Kunde erhält ein neues Bestelltoken.
 
+\begin{itemize}
+  \item{Nebenläufigkeit:}\\
+  Im Netz gibt es keine Nebenläufigkeit, da das Bestelltoken des Kunden nur durchgereicht wird.
+  \item{Lebendigkeit:}\\
+  Das Netz ist Lebendig, da das Bestelltoken immer im Kreis weitergereicht wird. Somit kann jede Transition aus einer Markierung heraus aktiviert werden die aus jeder erreichbaren Markierung erreicht werden kann.
+  \item{Determinismus:}
+  Das Netz ist deterministisch, da es auch keine Nebenläufgikeit gibt.
+  \item{Beschränktheit:}\\
+  Das Netz ist nicht beschränkt, da der Kundenposteingang unendlich viele Marken enthalten kann.
+  \item{Rücksetzbarkeit:}\\
+  Das Netz ist nicht Rücksetzbar, da der Kundenposteingang nie wieder 0 Marken enthält.
+\end{itemize}
+
 % Section 7.5.2
 \subsubsection{}
 \includegraphics[scale=0.3]{G-6-A-07-Netz3-Buczko_Heid_Deinert.pdf}\\
@@ -226,6 +239,18 @@ genug Ressources in das jeweilige Lager geliefert, um 100 Autos herzustellen.
 Zusätzlich zu den Lagern, sind auch 4 Arbeitsplätze hinzugekommen,
 die die Ressourcen erhalten und mithilfe der Montagelinie
 Autos produzieren.
+\begin{itemize}
+  \item{Nebenläufigkeit:}\\
+  Im Netz gibt es keine Nebenläufigkeit, da das Bestelltoken des Kunden nur durchgereicht wird.
+  \item{Lebendigkeit:}\\
+  Das Netz ist Lebendig, da das Bestelltoken immer im Kreis weitergereicht wird. Somit kann jede Transition aus einer Markierung heraus aktiviert werden die aus jeder erreichbaren Markierung erreicht werden kann.
+  \item{Determinismus:}
+  Das Netz ist deterministisch, da es auch keine Nebenläufgikeit gibt.
+  \item{Beschränktheit:}\\
+  Das Netz ist nicht beschränkt, da der Kundenposteingang unendlich viele Marken enthalten kann.
+  \item{Rücksetzbarkeit:}\\
+  Das Netz ist nicht Rücksetzbar, da der Kundenposteingang nie wieder 0 Marken enthält.
+\end{itemize}
 
 % Section 7.5.3
 \subsubsection{}
@@ -233,6 +258,19 @@ Autos produzieren.
 Die Montagelinie wurde verfeinert und besteht nun aus 4 Transitionen.
 Die Transitionen setzen nach dem Abschließen ihrer Aufgabe ein Token auf eine Stelle, die der nächsten Transition
 signalisiert, dass sie mit ihrer Arbeit beginnen kann.
+\begin{itemize}
+  \item{Nebenläufigkeit:}\\
+  Im Netz gibt es Nebenläufigkeit, da beispielswiese die Verteilung an die Arbeitsplätze und die Montagelinie gleichzeitig aktiviert sein können und sich gegenseitig nicht beeinflussen.
+  \item{Lebendigkeit:}\\
+  Das Netz ist Lebendig, da das Bestelltoken immer im Kreis weitergereicht wird. Somit kann jede Transition aus einer Markierung heraus aktiviert werden die aus jeder erreichbaren Markierung erreicht werden kann.
+  \item{Determinismus:}
+  Das Netz ist nicht deterministisch, da bei ausreichend vielen Ressourcen Arbeitsplätze ausgestattet werden können oder die Montagelinie arbeiten kann.
+  \item{Beschränktheit:}\\
+  Das Netz ist nicht beschränkt, da der Kundenposteingang unendlich viele Marken enthalten kann.
+  \item{Rücksetzbarkeit:}\\
+  Das Netz ist nicht Rücksetzbar, da der Kundenposteingang nie wieder 0 Marken enthält.
+\end{itemize}
+
 % Section 7.5.4
 \subsubsection{}
 \includegraphics[scale=0.3]{G-6-A-07-Netz5-Buczko_Heid_Deinert.pdf}\\
@@ -240,10 +278,34 @@ Es wurde eine zweite Montagelinie eingefügt. Zusätzlich wurden zwei Stellen an
 regulieren, welche der beiden Verteiltransitionen schalten darf.
 Da wir keinen Randomnumbergenerator in Renew einbauen konnten, 
 fehlt diese Funktionalität in unserem Netz und ist mithilfe dieser Stellen nur angedeutet.
+\begin{itemize}
+  \item{Nebenläufigkeit:}\\
+  Im Netz gibt es Nebenläufigkeit, da beispielswiese die Verteilung an die Arbeitsplätze und die Montagelinie gleichzeitig aktiviert sein können und sich gegenseitig nicht beeinflussen.
+  \item{Lebendigkeit:}\\
+  Das Netz ist Lebendig, da das Bestelltoken immer im Kreis weitergereicht wird. Somit kann jede Transition aus einer Markierung heraus aktiviert werden die aus jeder erreichbaren Markierung erreicht werden kann.
+  \item{Determinismus:}
+  Das Netz ist nicht deterministisch, da die Arbeitsplätze zufällig ausgetattet werden.
+  \item{Beschränktheit:}\\
+  Das Netz ist nicht beschränkt, da der Kundenposteingang unendlich viele Marken enthalten kann.
+  \item{Rücksetzbarkeit:}\\
+  Das Netz ist nicht Rücksetzbar, da der Kundenposteingang nie wieder 0 Marken enthält.
+\end{itemize}
 
 % Section 7.5.5
 \subsubsection{}
 \includegraphics[scale=0.3]{G-6-A-07-Netz6-Buczko_Heid_Deinert.pdf}\\
 Es wurde ein Konto hinzugefügt, dass bei jeder erfolgreichen Auslieferung 200 Geld erhält und bei jeder Lieferung des Lieferanten 100 Geld an diesen überweist.
+\begin{itemize}
+  \item{Nebenläufigkeit:}\\
+  Im Netz gibt es Nebenläufigkeit, da beispielswiese die Verteilung an die Arbeitsplätze und die Montagelinie gleichzeitig aktiviert sein können und sich gegenseitig nicht beeinflussen.
+  \item{Lebendigkeit:}\\
+  Das Netz ist Lebendig, da das Bestelltoken immer im Kreis weitergereicht wird. Somit kann jede Transition aus einer Markierung heraus aktiviert werden die aus jeder erreichbaren Markierung erreicht werden kann.
+  \item{Determinismus:}
+  Das Netz ist nicht deterministisch, da die Arbeitsplätze zufällig ausgetattet werden.
+  \item{Beschränktheit:}\\
+  Das Netz ist nicht beschränkt, da der Kundenposteingang unendlich viele Marken enthalten kann.
+  \item{Rücksetzbarkeit:}\\
+  Das Netz ist nicht Rücksetzbar, da der Kundenposteingang nie wieder 0 Marken enthält.
+\end{itemize}
 
 \end{document}
