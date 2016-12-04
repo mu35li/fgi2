@@ -201,4 +201,49 @@ versetzt werden kann.
     reversibel
 
 \end{itemize}
+% Section 7.4
+\subsection{}
+% Section 7.5
+\subsection{}
+% Section 7.5.1
+\subsubsection{}
+\includegraphics[scale=0.4]{G-6-A-07-Netz2-Buczko_Heid_Deinert.pdf}\\
+Der Kunde hat zu Beginn ein Bestelltoken, mit dem er 
+die Bestellung von 100 Fahrzeugen in Auftrag geben 
+kann. Nachdem das Token bis zum Lieferantenbestelleingang durchgereicht wurde,
+werden 100 Materialien ins Materiallager gebracht,
+um dann 100 Autos produzieren zu können.
+Nachdem 100 Autos produziert wurden, werden diese ausgeliefert
+und der Kunde erhält ein neues Bestelltoken.
+
+% Section 7.5.2
+\subsubsection{}
+\includegraphics[scale=0.3]{G-6-A-07-Netz3-Buczko_Heid_Deinert.pdf}\\
+Das Materiallager wurde durch einzelne Lager für
+die jeweiligen Bestandteile eines Autos ersetzt.
+Wenn der Lieferant die Ressourcen liefert, werden nun immer
+genug Ressources in das jeweilige Lager geliefert, um 100 Autos herzustellen.
+Zusätzlich zu den Lagern, sind auch 4 Arbeitsplätze hinzugekommen,
+die die Ressourcen erhalten und mithilfe der Montagelinie
+Autos produzieren.
+
+% Section 7.5.3
+\subsubsection{}
+\includegraphics[scale=0.3]{G-6-A-07-Netz4-Buczko_Heid_Deinert.pdf}\\
+Die Montagelinie wurde verfeinert und besteht nun aus 4 Transitionen.
+Die Transitionen setzen nach dem Abschließen ihrer Aufgabe ein Token auf eine Stelle, die der nächsten Transition
+signalisiert, dass sie mit ihrer Arbeit beginnen kann.
+% Section 7.5.4
+\subsubsection{}
+\includegraphics[scale=0.3]{G-6-A-07-Netz5-Buczko_Heid_Deinert.pdf}\\
+Es wurde eine zweite Montagelinie eingefügt. Zusätzlich wurden zwei Stellen an die Transitionen "An Arbeitsplätze verteilen" angehängt. Diese 
+regulieren, welche der beiden Verteiltransitionen schalten darf.
+Da wir keinen Randomnumbergenerator in Renew einbauen konnten, 
+fehlt diese Funktionalität in unserem Netz und ist mithilfe dieser Stellen nur angedeutet.
+
+% Section 7.5.5
+\subsubsection{}
+\includegraphics[scale=0.3]{G-6-A-07-Netz6-Buczko_Heid_Deinert.pdf}\\
+Es wurde ein Konto hinzugefügt, dass bei jeder erfolgreichen Auslieferung 200 Geld erhält und bei jeder Lieferung des Lieferanten 100 Geld an diesen überweist.
+
 \end{document}
