@@ -77,7 +77,7 @@
         (C) edge              node {$t_3$} (A)
         (E) edge 			  node {$t_6$} (C)
         (F) edge              node {$t_1$} (C)
-        	edge              node {$t_1$} (I)
+        	edge              node {$t_2$} (I)
         (C) edge              node {$t_4$} (G)
         (G) edge              node {$t_5$} (E)
         	edge              node {$t_6$} (H)
@@ -96,24 +96,37 @@
         (P) edge              node {$t_6$} (I)
         (Q) edge              node {$t_8$} (M)
         	edge              node {$t_9$} (K)
-        (M) edge              node {$t_8$} (R);
+        (M) edge              node {$t_8$} (R)
+        (R) edge [bend right]           node {$t_5$} (N);
   
         
 \end{tikzpicture}
 %Anhand des Erreichbarkeitsgraphen ist zu erkennen, dass das Netz \textbf{nicht reversibel} ist, da $m_0$ in $p_1$ von allen weiteren erreichbaren Markierungen aus erreichbar ist. Ebenso ist es \textbf{lebendig}, da jede Transition in jeder Markierung potenziell aktivierbar ist und es keine Verklemmungen gibt. Es ist auch \textbf{beschränkt}, da der Graph endlich ist.\\\\%
 \\
-\textbf{Lebendigkeit:} \\
-\textbf{Reversibilität:} \\
-\textbf{Beschränktheit:} \\
+\textbf{Lebendigkeit:} Das Netz ist nicht Lebendig,
+da aus der Markierung $p3(2)$ heraus keine Markierung 
+erreicht werden kann die eine beliebige Transition 
+aktiviert.\\
+\textbf{Reversibilität:} Das Netz ist nicht reversibel, da mit der Schaltfolge\\
+$p1(2) \xrightarrow{t_2} p1p3 \xrightarrow{t_2} p3(2)$
+\\
+eine Markierung erreicht werden kann, aus der die 
+Anfangsmarkierung nicht mehr zu erreichen ist.\\
+\textbf{Beschränktheit:} Das Netz ist 2-beschränkt, da 
+der Erreichbarkeitsgraph zeigt, dass nie mehr als 2 
+Marken auf einem Platz liegen.\\
 \textbf{Strukturelle Eigenschaften:\\}
 \subsubsection{}
 \textbf{Strukturelle Beschränktheit:}\\
 \textbf{Strukturelle Lebendigkeit:}\\
-\textbf{Fairness: }Das Netz schaltet nicht fair, da z.b. von Markierung $p_2 p_3$ aus die beiden Marken nur reichen um entweder den Pfad $t_3$ zu gehen oder den Pfad $t_4$. Es gibt also unfaire Folgen in diesem Netz. Also müssen nicht alle Transitionen immer schalten, was für Fairness eine Voraussetzung ist.
+\textbf{Fairness: }Das Netz schaltet nicht fair, da 
+z.b. von Markierung $p_2 p_3$ aus die beiden Marken 
+nur reichen um entweder den Pfad $t_3$ zu gehen oder 
+den Pfad $t_4$. Es gibt also unfaire Folgen in diesem 
+Netz. Also müssen nicht alle Transitionen immer 
+schalten, was für Fairness eine Voraussetzung ist.
 \subsubsection{}
-ee
 \subsubsection{}
-eee
 \subsection{}
 \textbf{1. Erreichbarkeitsgraph zeichnen}\\
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm, semithick]
