@@ -54,11 +54,91 @@ $m$ unbeschränkt ist und es keine kleinere
  $B = \{(2,1,0)^t,(0,2,0)^t,(2,0,2)^t\}$.
 \subsubsection{}
 \includegraphics[scale=0.5]{netz.png}
+\newpage
 \subsection{}
 \subsubsection{}
+Die geforderte Wirkungsmatrix sieht wie folgt aus:\\\\
+$
+\Delta_{N_{LS}} = 
+\begin{pmatrix}
+-1 & 0 & 1 & -1 & 0 & 1\\
+1 & -1 & 0 & 0 & 0 & 0\\
+0 & 1 & -1 & 0 & 0 & 0\\
+0 & 0 & 0 & 1 & -1 & 0\\
+0 & 0 & 0 & 0 & 1 & -1\\
+0 & -1 & 1 & 0 & -4 & 4
+\end{pmatrix}
+$\\\\
+Durch Lösen des Gleichungssystems aus $\Delta_{N_{LS}}^{tr} \cdot i = \underline{0}$ erhalten wir die allgemeine Gleichung der P-Invariantenvektoren:\\
+$
+\begin{pmatrix}
+p4-4 \cdot pp\\
+p4-4 \cdot pp\\
+p4-3 \cdot pp\\
+p4-4 \cdot pp\\
+p4\\
+pp
+\end{pmatrix}
+$\\\\
+Zwei explizite P-Invarianten:\\
+$
+\begin{pmatrix}
+2\\
+2\\
+3\\
+2\\
+6\\
+1
+\end{pmatrix}
+$
+und
+$
+\begin{pmatrix}
+1\\
+1\\
+3\\
+1\\
+9\\
+2
+\end{pmatrix}
+$\\\\\\
+Durch Lösen des Gleichungssystems aus $\Delta_{N_{LS}} \cdot j = \underline{0}$ erhalten wir die allgemeine Gleichung der T-Invariantenvektoren:\\
+$
+\begin{pmatrix}
+p_1\\
+p_1\\
+p_1\\
+p_2\\
+p_2\\
+p_2\\
+\end{pmatrix}
+$\\\\
+Zwei explizite T-Invarianten:\\
+$
+\begin{pmatrix}
+1\\
+1\\
+1\\
+2\\
+2\\
+2
+\end{pmatrix}
+$
+und
+$
+\begin{pmatrix}
+2\\
+2\\
+2\\
+3\\
+3\\
+3
+\end{pmatrix}
+$
 \subsubsection{}
 Die geforderte Wirkungsmatrix sieht wie folgt aus:\\\\
-$\Delta_{N_{Drohne}} = 
+$
+\Delta_{N_{Drohne}} = 
 \begin{pmatrix}
 -1 & 0 & 0 & 0 & 0 & 1\\
 1 & -1 & 0 & 0 & 0 & 0\\
@@ -74,4 +154,33 @@ $
 Menge aller S-Invariantenvektoren:\\
 $\{(p_1,p_2,p_3,p_4,p_5,p_6,p_7,p_8)\ |\ p_2=p_8,\ p_3=p_4=p_7,\ p_1=p_2-p_5,\ p_6=p_3-p_2,\ p_i \in \mathbb{Z}\}$
 \subsubsection{}
+\subsubsection{}
+Die geforderte Wirkungsmatrix sieht wie folgt aus:\\\\
+$
+\Delta_{N_{DrohneNeu}} =
+\begin{pmatrix}
+-1 & 0 & 0 & 0 & 0 & 1 & 0\\
+1 & -1 & 0 & 0 & 0 & 0 & 0\\
+0 & 1 & -1 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & -1 & 0 & 0 & 0\\
+-1 & 0 & 0 & 0 & 0 & 0 & 1\\
+0 & -1 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 & -1 & 0 & 0\\
+\end{pmatrix}
+$\\
+Durch Lösen des Gleichungssystems aus $\Delta_{N_{DrohneNeu}}^{tr} \cdot i = \underline{0}$ erhalten wir die allgemeine Gleichung der P-Invariantenvektoren:\\
+$
+\begin{pmatrix}
+0\\
+0\\
+p\\
+p\\
+0\\
+p\\
+p
+\end{pmatrix}$\\\\
+und die dazugehörige Menge:\\
+$\{(0,0,p,p,0,p,p)\ |\ p \in \mathbb{Z}\}
+$
+
 \end{document}
