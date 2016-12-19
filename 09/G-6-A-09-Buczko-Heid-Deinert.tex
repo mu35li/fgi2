@@ -74,7 +74,7 @@ p4\\
 pp
 \end{pmatrix}
 $\\\\
-Zwei explizite Invarianten:\\
+Zwei explizite P-Invarianten:\\
 $
 \begin{pmatrix}
 2\\
@@ -94,6 +94,39 @@ $
 1\\
 9\\
 2
+\end{pmatrix}
+$\\\\\\
+Durch Lösen des Gleichungssystems aus $\Delta_{N_{LS}} \cdot j = \underline{0}$ erhalten wir die allgemeine Gleichung der T-Invariantenvektoren:\\
+$
+\begin{pmatrix}
+p_1\\
+p_1\\
+p_1\\
+p_2\\
+p_2\\
+p_2\\
+\end{pmatrix}
+$\\\\
+Zwei explizite T-Invarianten:\\
+$
+\begin{pmatrix}
+1\\
+1\\
+1\\
+2\\
+2\\
+2
+\end{pmatrix}
+$
+und
+$
+\begin{pmatrix}
+2\\
+2\\
+2\\
+3\\
+3\\
+3
 \end{pmatrix}
 $
 \subsubsection{}
@@ -115,4 +148,33 @@ $
 Menge aller S-Invariantenvektoren:\\
 $\{(p_1,p_2,p_3,p_4,p_5,p_6,p_7,p_8)\ |\ p_2=p_8,\ p_3=p_4=p_7,\ p_1=p_2-p_5,\ p_6=p_3-p_2,\ p_i \in \mathbb{Z}\}$
 \subsubsection{}
+\subsubsection{}
+Die geforderte Wirkungsmatrix sieht wie folgt aus:\\\\
+$
+\Delta_{N_{DrohneNeu}} =
+\begin{pmatrix}
+-1 & 0 & 0 & 0 & 0 & 1 & 0\\
+1 & -1 & 0 & 0 & 0 & 0 & 0\\
+0 & 1 & -1 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & -1 & 0 & 0 & 0\\
+-1 & 0 & 0 & 0 & 0 & 0 & 1\\
+0 & -1 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 & -1 & 0 & 0\\
+\end{pmatrix}
+$\\
+Durch Lösen des Gleichungssystems aus $\Delta_{N_{DrohneNeu}}^{tr} \cdot i = \underline{0}$ erhalten wir die allgemeine Gleichung der P-Invariantenvektoren:\\
+$
+\begin{pmatrix}
+0\\
+0\\
+p\\
+p\\
+0\\
+p\\
+p
+\end{pmatrix}$\\\\
+und die dazugehörige Menge:\\
+$\{(0,0,p,p,0,p,p)\ |\ p \in \mathbb{Z}\}
+$
+
 \end{document}
