@@ -47,12 +47,6 @@
 % Section 9.3
 \subsection{}
 \subsubsection{}
-Ein Markierungsprädikat für ein beschränktes Netz ist $\neg\exists m:m(p)>k$.
-Die Menge $B$ sagt aus, dass das Netz für eine Markierung
-$m$ unbeschränkt ist und es keine kleinere
- Markierung $m'$ gibt, für die etwas anderes gilt. Die Menge $B$ sieht also wie folgt aus:\\
- $B = \{(2,1,0)^t,(0,2,0)^t,(2,0,2)^t\}$.
-\subsubsection{}
 \includegraphics[scale=0.5]{netz.png}
 \newpage
 \subsection{}
@@ -153,6 +147,8 @@ $
 \subsubsection{}
 Menge aller S-Invariantenvektoren:\\
 $\{(p_1,p_2,p_3,p_4,p_5,p_6,p_7,p_8)\ |\ p_2=p_8,\ p_3=p_4=p_7,\ p_1=p_2-p_5,\ p_6=p_3-p_2,\ p_i \in \mathbb{Z}\}$
+Das Netz ist strukturell beschränkt, da eine P-Invariante in der obigen Menge ist, für die jede Stelle >0 ist.(Gezeigt in Beweis zu Theorem 7.35): (4,5,7,7,1,2,7,5)$^{tr}$, diese Invariante überdeckt ebenfalls das ganze Netz.
+
 \subsubsection{}
 \subsubsection{}
 Die geforderte Wirkungsmatrix sieht wie folgt aus:\\\\
@@ -181,6 +177,7 @@ p
 \end{pmatrix}$\\\\
 und die dazugehörige Menge:\\
 $\{(0,0,p,p,0,p,p)\ |\ p \in \mathbb{Z}\}
-$
+$\\\\
+Das Netz ist nicht strukturell beschränkt, da keine P-Invariante in der obigen Menge ist, für die jede Stelle >0 ist.(Gezeigt in Beweis zu Theorem 7.35)
 
 \end{document}
