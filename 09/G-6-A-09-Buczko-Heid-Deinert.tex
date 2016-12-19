@@ -48,11 +48,58 @@
 \subsection{}
 \subsubsection{}
 \includegraphics[scale=0.5]{netz.png}
+\newpage
 \subsection{}
 \subsubsection{}
+Die geforderte Wirkungsmatrix sieht wie folgt aus:\\\\
+$
+\Delta_{N_{LS}} = 
+\begin{pmatrix}
+-1 & 0 & 1 & -1 & 0 & 1\\
+1 & -1 & 0 & 0 & 0 & 0\\
+0 & 1 & -1 & 0 & 0 & 0\\
+0 & 0 & 0 & 1 & -1 & 0\\
+0 & 0 & 0 & 0 & 1 & -1\\
+0 & -1 & 1 & 0 & -4 & 4
+\end{pmatrix}
+$\\\\
+Durch Lösen des Gleichungssystems aus $\Delta_{N_{LS}}^{tr} \cdot i = \underline{0}$ erhalten wir die allgemeine Gleichung der P-Invariantenvektoren:\\
+$
+\begin{pmatrix}
+p4-4 \cdot pp\\
+p4-4 \cdot pp\\
+p4-3 \cdot pp\\
+p4-4 \cdot pp\\
+p4\\
+pp
+\end{pmatrix}
+$\\\\
+Zwei explizite Invarianten:\\
+$
+\begin{pmatrix}
+2\\
+2\\
+3\\
+2\\
+6\\
+1
+\end{pmatrix}
+$
+und
+$
+\begin{pmatrix}
+1\\
+1\\
+3\\
+1\\
+9\\
+2
+\end{pmatrix}
+$
 \subsubsection{}
 Die geforderte Wirkungsmatrix sieht wie folgt aus:\\\\
-$\Delta_{N_{Drohne}} = 
+$
+\Delta_{N_{Drohne}} = 
 \begin{pmatrix}
 -1 & 0 & 0 & 0 & 0 & 1\\
 1 & -1 & 0 & 0 & 0 & 0\\
